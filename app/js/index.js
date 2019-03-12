@@ -1,3 +1,72 @@
+// function toggleActiveBtn() {
+//     $(".choose-buttons .btn").on('click', function(){
+
+//         if ( $('.choose-buttons .btn.active').length < 5 ) {
+            
+//             $(this).toggleClass("active");
+
+//             if ( $('.choose-buttons .btn.active').length == 1 ) {
+//                 $('.js-count').removeClass('active');
+//                 $('.js-count').eq(0).addClass('active');
+//             }
+//             else if ( $('.choose-buttons .btn.active').length == 2 ) {
+//                 $('.js-count').removeClass('active');
+//                 $('.js-count').eq(1).addClass('active');
+//             }
+//             else if ( $('.choose-buttons .btn.active').length == 3 ) {
+//                 $('.js-count').removeClass('active');
+//                 $('.js-count').eq(2).addClass('active');
+//             }
+//             else if ( $('.choose-buttons .btn.active').length == 4 ) {
+//                 $('.js-count').removeClass('active');
+//                 $('.js-count').eq(3).addClass('active');
+//             }
+//             else if ( $('.choose-buttons .btn.active').length == 5 ) {
+//                 $('.js-count').removeClass('active');
+//                 $('.js-count').eq(4).addClass('active');
+//             }
+//         }
+
+//     });
+// }
+
+function toggleActiveBtn() {
+    
+    $(".choose-buttons .btn").on('click', function(){
+        const len = $('.choose-buttons .btn.active').length,
+                    $this = $(this);
+            
+        if ( len < 5 || $this.hasClass('active') ) {
+            $this.toggleClass("active");
+
+            if ( $('.choose-buttons .btn.active').length == 1 ) {
+                $('.js-count').removeClass('active');
+                $('.js-count').eq(0).addClass('active');
+            }
+            else if ( $('.choose-buttons .btn.active').length == 2 ) {
+                $('.js-count').removeClass('active');
+                $('.js-count').eq(1).addClass('active');
+            }
+            else if ( $('.choose-buttons .btn.active').length == 3 ) {
+                $('.js-count').removeClass('active');
+                $('.js-count').eq(2).addClass('active');
+            }
+            else if ( $('.choose-buttons .btn.active').length == 4 ) {
+                $('.js-count').removeClass('active');
+                $('.js-count').eq(3).addClass('active');
+            }
+            else if ( $('.choose-buttons .btn.active').length == 5 ) {
+                $('.js-count').removeClass('active');
+                $('.js-count').eq(4).addClass('active');
+            }
+        }
+
+    });
+}
+
+toggleActiveBtn();
+
+
 
 
 
