@@ -145,10 +145,19 @@ button {
         @media (max-width: 940px) {
             margin: 0 5%;
         }
+        @media (max-width: 860px) {
+            margin: 0 10%;
+            flex-direction: column;
+        }
     }
 
     &-info {
         flex-basis: 30%;
+
+        @media (max-width: 860px) {
+            margin-bottom: 5%;
+            width: 100%;
+        }
 
         .info {
 
@@ -184,6 +193,10 @@ button {
         position: relative;
         flex-basis: 70%;
 
+        @media (max-width: 860px) {
+            width: 100%;
+        }
+
         .stat {
 
             &-list {
@@ -197,7 +210,7 @@ button {
                     height: 200%;
                     width: 100%;
                     position: absolute;
-                    top: 0;
+                    top: -2%;
                     left: 0;
                     background: url(../img/pyramid.svg) no-repeat;
                     z-index: 20;
@@ -214,6 +227,9 @@ button {
 
                 @media (max-width: 625px) {
                     width: 65%;
+                }
+                @media (max-width: 380px) {
+                    width: 55%;
                 }
 
                 .text {
@@ -508,7 +524,14 @@ button {
                 background-color: rgba(#fff, .12);
                 border-radius: 10px;
                 box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.2);
-            
+                
+                .table-row {
+
+                    &:hover {
+                        background-color: rgba(#000, .5);
+                    }
+                }
+
                 @media (max-width: 570px) {
                     font-size: 16px;
                 }
