@@ -132,13 +132,17 @@ button {
 
 // pyramid
 .pyramid {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 
     .container {
         margin: 0 20%;
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media (max-width: 940px) {
+            margin: 0 5%;
+        }
     }
 
     &-info {
@@ -190,15 +194,34 @@ button {
             }
 
             &-list {
+                position: relative;
                 display: flex;
                 flex-direction: column;
+                z-index: 15;
+
+                &:before {
+                    content: '';
+                    height: 200%;
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: url(../img/pyramid.svg) no-repeat;
+                    z-index: 20;
+                }
             }
 
             &-item {
                 padding: 10px 0 5px;
+                width: 75%;
+                align-self: flex-end;
                 text-align: right;
                 color: rgba(#fff, .2);
                 border-bottom: 1px solid rgba(#fff, .2);
+
+                @media (max-width: 625px) {
+                    width: 65%;
+                }
 
                 .text {
                     font-size: 18px;
@@ -225,6 +248,10 @@ button {
     &-choose {
         margin-bottom: 40px;
 
+        @media (max-width: 940px) {
+            margin-bottom: 50px;
+        }
+
         &-text {
             margin-bottom: 25px;
             text-align: center;
@@ -240,9 +267,13 @@ button {
                 display: inline-block;
                 font-size: 0;
 
+                @media (max-width: 940px) {
+                    width: 100%;
+                }
+
                 .btn {
-                    height: 60px;
-                    width: 60px;
+                    height: 50px;
+                    width: 50px;
                     display: inline-block;
                     background-color: #0a1240;
                     color: #fff;
@@ -250,11 +281,33 @@ button {
                     border: 2px solid $blue;
                     border-right: 0;
                     cursor: pointer;
+                    
+                    @media (max-width: 1070px) {
+                        height: 45px;
+                        width: 45px;
+                        font-size: 20px;
+                    }
+                    @media (max-width: 940px) {
+                        height: 70px;
+                        width: 70px;
+                    }
 
                     &-group {
                         display: inline-block;
 
+                        @media (max-width: 940px) {
+                            display: flex;
+                            justify-content: center;
+                        }
+
+                        @media (max-width: 940px) {
+                            .btn:last-child {
+                                border-right: 2px solid $blue;
+                            }
+                        }
+
                         &:last-child {
+
                             .btn:last-child {
                                 border-right: 2px solid $blue;
                             }
@@ -294,6 +347,20 @@ button {
                 display: inline-block;
                 font-size: 48px;
                 font-weight: bold;
+
+                @media (max-width: 1000px) {
+                    height: 50px;
+                    font-size: 32px;
+                    line-height: 50px;
+                }
+                @media (max-width: 940px) {
+                    margin-top: 10px;
+                    width: 100%;
+                    display: block;
+                    font-size: 40px;
+                    text-align: center;
+                    line-height: normal;
+                }
             }
         }
     }
@@ -430,6 +497,10 @@ button {
                 background-color: rgba(#fff, .8);
                 border-radius: 4px;
 
+                @media (max-width: 570px) {
+                    font-size: 18px;
+                }
+
                 .table-column {
 
                     &:not(:last-child) {
@@ -444,6 +515,10 @@ button {
                 background-color: rgba(#fff, .12);
                 border-radius: 10px;
                 box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.2);
+            
+                @media (max-width: 570px) {
+                    font-size: 16px;
+                }
             }
 
             &-row {
@@ -454,6 +529,10 @@ button {
                 padding: 12px 40px;
                 flex: 1;
                 flex-basis: 100%;
+
+                @media (max-width: 570px) {
+                    padding: 6px 20px;
+                }
             }
         }
     }
