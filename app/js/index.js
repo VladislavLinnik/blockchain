@@ -39,7 +39,10 @@ function toggleActiveBtn() {
         if ( len < 5 || $this.hasClass('active') ) {
             $this.toggleClass("active");
 
-            if ( $('.choose-buttons .btn.active').length == 1 ) {
+            if ( $('.choose-buttons .btn.active').length == 0 ) {
+                $('.js-count').removeClass('active');
+            }
+            else if ( $('.choose-buttons .btn.active').length == 1 ) {
                 $('.js-count').removeClass('active');
                 $('.js-count').eq(0).addClass('active');
             }

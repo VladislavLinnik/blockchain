@@ -132,6 +132,7 @@ button {
 
 // pyramid
 .pyramid {
+    margin-bottom: 50px;
 
     .container {
         margin: 0 20%;
@@ -174,9 +175,19 @@ button {
     }
 
     &-stat {
+        position: relative;
         flex-basis: 70%;
 
         .stat {
+
+            &-img {
+                position: absolute;
+
+                img {
+                    width: 100%;
+                    display: block;
+                }
+            }
 
             &-list {
                 display: flex;
