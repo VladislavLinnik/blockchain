@@ -134,7 +134,10 @@ button {
 
 // pyramid
 .pyramid {
-    margin-bottom: 70px;
+
+    @media (max-width: 650px) {
+            
+    }
 
     .container {
         margin: 0 20%;
@@ -147,6 +150,9 @@ button {
         }
         @media (max-width: 860px) {
             margin: 0 10%;
+        }
+        @media (max-width: 650px) {
+            flex-direction: column;
         }
     }
 
@@ -188,12 +194,17 @@ button {
         display: flex;
         flex-basis: 70%;
 
+        @media (max-width: 650px) {
+            width: 100%;
+        }
+
         .stat {
 
             &-img {
                 width: 300px;
                 position: relative;
-                top: -10px;
+                top: 0;
+                left: 0;
                 z-index: 100;
 
                 img {
@@ -202,9 +213,10 @@ button {
             }
 
             &-list {
-                width: calc(100% - 150px);
-                position: relative;
-                left: -130px;
+                width: calc(100% - 200px);
+                position: absolute;
+                top: 10px;
+                left: 135px;
                 display: flex;
                 flex-direction: column;
                 z-index: 15;
