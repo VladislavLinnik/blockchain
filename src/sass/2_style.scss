@@ -220,6 +220,11 @@ button {
                 display: flex;
                 flex-direction: column;
                 z-index: 15;
+
+                @media (max-width: 650px) {
+                    width: 100%;
+                    left: -38px;
+                }
             }
 
             &-item {
