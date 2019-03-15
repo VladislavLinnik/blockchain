@@ -40,7 +40,7 @@ body {
     padding: 0;
     height: 100%;
     background: #174664 url(../img/bg.jpg);
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-size: cover;
     background-attachment: fixed;
     color: #fff;
@@ -74,6 +74,21 @@ button {
     bottom: 0;
     left: 0;
     z-index: -1;
+}
+.img-bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -2;
+
+    img {
+        height: 100%;
+        max-width: 100%;
+    }
 }
 
 
@@ -140,17 +155,10 @@ button {
     }
 
     .container {
-        margin: 0 20%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        @media (max-width: 940px) {
-            margin: 0 5%;
-        }
-        @media (max-width: 860px) {
-            margin: 0 10%;
-        }
+        
         @media (max-width: 650px) {
             flex-direction: column;
         }
@@ -224,7 +232,7 @@ button {
             }
 
             &-list {
-                width: calc(100% - 200px);
+                width: calc(100% - 135px);
                 position: absolute;
                 top: 10px;
                 left: 135px;
@@ -233,8 +241,7 @@ button {
                 z-index: 15;
 
                 @media (max-width: 650px) {
-                    width: 100%;
-                    left: -38px;
+                    
                 }
             }
 
@@ -248,12 +255,6 @@ button {
 
                 @media (max-width: 750px) {
                     width: 100%;
-                }
-                @media (max-width: 625px) {
-                    width: 65%;
-                }
-                @media (max-width: 380px) {
-                    width: 55%;
                 }
 
                 .text {
@@ -295,7 +296,7 @@ button {
         .choose {
 
             &-buttons {
-                width: 90%;
+                max-width: 90%;
                 float: left;
                 display: inline-block;
                 font-size: 0;
@@ -375,8 +376,9 @@ button {
             }
 
             &-number {
+                padding-left: 5%;
                 width: 10%;
-                float: right;
+                float: left;
                 display: inline-block;
                 font-size: 48px;
                 font-weight: bold;
