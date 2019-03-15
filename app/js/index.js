@@ -10,6 +10,7 @@ function toggleActiveBtn() {
             
             if ( $('.choose-buttons .btn.active').length == 0 ) {
                 $('.js-count').removeClass('active');
+                $('.js-chooseNumber').text('');
                 $('.js-betInfoNumber').text(' ');
             }
             else if ( $('.choose-buttons .btn.active').length == 1 ) {
