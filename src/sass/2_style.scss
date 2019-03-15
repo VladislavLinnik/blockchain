@@ -170,6 +170,17 @@ button {
             &-number {
                 color: #fff;
                 font-size: 50px;
+
+                .icon {
+                    margin-right: 10px;
+                    height: 15px;
+                    width: 15px;
+                    display: inline-block;
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
             }
 
             &--second {

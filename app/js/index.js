@@ -15,26 +15,31 @@ function toggleActiveBtn() {
                 $('.js-count').removeClass('active');
                 $('.js-count').eq(0).addClass('active');
                 $('.js-chooseNumber').text('X10');
+                $('.js-betInfoNumber').text('10 раз');
             }
             else if ( $('.choose-buttons .btn.active').length == 2 ) {
                 $('.js-count').removeClass('active');
                 $('.js-count').eq(1).addClass('active');
                 $('.js-chooseNumber').text('X5');
+                $('.js-betInfoNumber').text('5 раз');
             }
             else if ( $('.choose-buttons .btn.active').length == 3 ) {
                 $('.js-count').removeClass('active');
                 $('.js-count').eq(2).addClass('active');
                 $('.js-chooseNumber').text('X4');
+                $('.js-betInfoNumber').text('4 раза');
             }
             else if ( $('.choose-buttons .btn.active').length == 4 ) {
                 $('.js-count').removeClass('active');
                 $('.js-count').eq(3).addClass('active');
                 $('.js-chooseNumber').text('X3');
+                $('.js-betInfoNumber').text('3 раза');
             }
             else if ( $('.choose-buttons .btn.active').length == 5 ) {
                 $('.js-count').removeClass('active');
                 $('.js-count').eq(4).addClass('active');
                 $('.js-chooseNumber').text('X2');
+                $('.js-betInfoNumber').text('2 раза');
             }
         }
 
