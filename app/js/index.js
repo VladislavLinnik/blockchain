@@ -10,7 +10,6 @@ function toggleActiveBtn() {
             
             if ( $('.choose-buttons .btn.active').length == 0 ) {
                 $('.js-count').removeClass('active');
-                $('.js-chooseNumber').text('X');
             }
             else if ( $('.choose-buttons .btn.active').length == 1 ) {
                 $('.js-count').removeClass('active');

@@ -39,7 +39,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    background: #174664;
+    background: #174664 url(../img/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -134,7 +134,10 @@ button {
 
 // pyramid
 .pyramid {
-    margin-bottom: 70px;
+
+    @media (max-width: 650px) {
+            
+    }
 
     .container {
         margin: 0 20%;
@@ -147,17 +150,14 @@ button {
         }
         @media (max-width: 860px) {
             margin: 0 10%;
+        }
+        @media (max-width: 650px) {
             flex-direction: column;
         }
     }
 
     &-info {
         flex-basis: 30%;
-
-        @media (max-width: 860px) {
-            margin-bottom: 5%;
-            width: 100%;
-        }
 
         .info {
 
@@ -191,40 +191,53 @@ button {
 
     &-stat {
         position: relative;
+        display: flex;
         flex-basis: 70%;
 
-        @media (max-width: 860px) {
+        @media (max-width: 650px) {
             width: 100%;
         }
 
         .stat {
 
-            &-list {
+            &-img {
+                width: 300px;
                 position: relative;
+                top: 0;
+                left: 0;
+                z-index: 100;
+
+                img {
+                    max-width: 100%;
+                }
+            }
+
+            &-list {
+                width: calc(100% - 200px);
+                position: absolute;
+                top: 10px;
+                left: 135px;
                 display: flex;
                 flex-direction: column;
                 z-index: 15;
 
-                &:before {
-                    content: '';
-                    height: 200%;
+                @media (max-width: 650px) {
                     width: 100%;
-                    position: absolute;
-                    top: -2%;
-                    left: 0;
-                    background: url(../img/pyramid.svg) no-repeat;
-                    z-index: 20;
+                    left: -38px;
                 }
             }
 
             &-item {
                 padding: 10px 0 5px;
-                width: 75%;
+                width: 100%;
                 align-self: flex-end;
                 text-align: right;
                 color: rgba(#fff, .2);
                 border-bottom: 1px solid rgba(#fff, .2);
 
+                @media (max-width: 750px) {
+                    width: 100%;
+                }
                 @media (max-width: 625px) {
                     width: 65%;
                 }
