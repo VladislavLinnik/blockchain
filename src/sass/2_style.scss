@@ -174,7 +174,7 @@ button {
             &-text {
                 margin-bottom: 5px;
                 color: rgba(#fff, .7);
-                font-size: 22px;
+                font-size: 20px;
 
                 @media (max-width: 750px) {
                     font-size: 18px;
@@ -183,10 +183,10 @@ button {
 
             &-number {
                 color: #fff;
-                font-size: 50px;
+                font-size: 40px;
 
                 @media (max-width: 750px) {
-                    font-size: 40px;
+                    font-size: 30px;
                 }
 
                 .icon {
@@ -414,13 +414,19 @@ button {
             }
 
             &-number {
-                margin-left: -3%;
+                margin-left: -5%;
                 width: 10%;
                 float: left;
                 display: inline-block;
                 font-size: 48px;
                 font-weight: bold;
                 
+                @media (max-width: 1170px) {
+                    margin-left: -4%;
+                }
+                @media (max-width: 1140px) {
+                    margin-left: -2%;
+                }
                 @media (max-width: 1120px) {
                     margin-left: -1%;
                 }
